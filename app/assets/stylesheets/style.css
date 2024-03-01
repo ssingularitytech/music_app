@@ -1572,7 +1572,7 @@ ol {
 .service__item {
 	background: #5c00ce;
 	height: 320px;
-	padding: 70px 40px 40px 70px;
+	/* padding: 70px 40px 40px 70px; */
 }
 
 .service__item.deep-bg {
@@ -1583,8 +1583,8 @@ ol {
 	font-size: 26px;
 	color: #ffffff;
 	font-weight: 700;
-	margin-top: 25px;
-	margin-bottom: 10px;
+	/* margin-top: 25px;
+	margin-bottom: 10px; */
 }
 
 .service__item p {

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   get 'landing/index'
   get 'landing/instrument'
   devise_for :users

@@ -48,8 +48,8 @@
         nav: true,
         navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         smartSpeed: 1200,
-        autoHeight: true,
-        autoplay: true,
+        autoHeight: false,
+        autoplay: false,
         responsive: {
             992: {
                 items: 3,

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+   
+
     <link rel="stylesheet" href="/assets/stylesheets/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/stylesheets/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/stylesheets/barfiller.css" type="text/css">
@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="/assets/stylesheets/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/assets/stylesheets/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
 </head>
 
 <body>
@@ -39,7 +38,8 @@
                 <div class="col-lg-2 col-md-2">
                     <div class="header__logo">
                         <a href="index.html.erb">
-                            <%= image_tag 'logo.png', alt: 'Logo' %>
+                            <!-- <%= image_tag 'logo.png', alt: 'Logo' %> -->
+                            <h2>LOGO</h2>
                         </a>
                     </div>
                 </div>
@@ -53,21 +53,21 @@
                                 <li><a href="./tours.html">Tours</a></li>
                                 <li><a href="./videos.html">Videos</a></li>
                                 <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
+                                    <!-- <ul class="dropdown">
                                         <li><a href="./about.html">About</a></li>
                                         <li><a href="./blog.html">Blog</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
-                        <div class="header__right__social">
+                        <!-- <div class="header__right__social">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-twitter"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -77,17 +77,27 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero spad set-bg" data-setbg="/assets/hero-bg.png">   
+    <section class="hero spad set-bg" data-setbg="/assets/backgroundimage.png">   
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="hero__text">
                         <span>New single</span>
                         <h1>Feel the heart beats</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br />tempor
                             incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                       
                     </div>
+                </div>
+            </div> -->
+            <div class="row d-flex">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-8 bg_text pl-5 py-3">
+                    <!-- <div class="hero__text"> -->
+                        <h3 class="bg_text">PRATAP'S</h3>
+                        <h1 class="bg_text">AMAZING</h1>
+                        <h1 class="bg_text">MUSICIANS</h1>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -111,7 +121,7 @@
                 <div class="event__slider owl-carousel">
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/events/event-1.jpg">
+                            <div class="event__item__pic set-bg" data-setbg="/assets/events/artist1.png">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -124,7 +134,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/events/event-2.jpg">
+                            <div class="event__item__pic set-bg" data-setbg="/assets/events/artist2.png">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -137,7 +147,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/events/event-3.jpg">
+                            <div class="event__item__pic set-bg" data-setbg="/assets/events/artist3.png">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -150,7 +160,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/events/event-2.jpg">
+                            <div class="event__item__pic set-bg" data-setbg="/assets/events/artist4.png">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -197,40 +207,50 @@
     <!-- Services Section Begin -->
     <section class="services">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="services__left set-bg" data-setbg="/assets/services/service-left.jpg">
-                        <a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <div class="row d-flex">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-9">Musicians Directory</div>
+                        <div class="col-3" style="text-align: end;"><button>View more</button></div>
                     </div>
                 </div>
-                <div class="col-lg-6 p-0">
+            </div>
+            <div class="row">
+                <div class="col-lg-5 px-0 image-container">
+                    <img style="height: 690px; width: 100%;" src="<%= asset_url('mainmusicianimage.png')%>">
+                    <img class="secondimage" style="height: 40%; width: 70%;" src="<%= asset_url('bgimage.png')%>">
+                    <p class="imgtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolorum quae ut aperiam suscipit accusantium consequuntur reprehenderit praesentium aliquam veniam, officia atque error necessitatibus molestiae commodi dolor assumenda quaerat temporibus!</p>
+                </div>
+                
+                <div class="col-lg-7 px-3">
                     <div class="row services__list">
-                        <div class="col-lg-6 p-0 order-lg-1 col-md-6 order-md-1 text-center">
-                            <div class="service__item deep-bg">
-                                <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist4.png')%>">
-                                <!-- <h4>Wedding</h4> -->
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                        <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2 text-center px-3 py-3">
+                            <div class="service__item deep-bg" style="background-color: #A84A1F;">
+                                <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist1.png')%>">
+                                <h4>Excepteur sint</h4>
+                                <p>occaecat cupidatat non provident, sunt in culpa qui</p>
+                            </div>
+                       </div>
+                        <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2 text-center px-3 py-3">
+                                <div class="service__item deep-bg" style="background-color: #FFB73E;">
+                                    <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist1.png')%>">
+                                    <h4>Excepteur sint</h4>
+                                    <p>occaecat cupidatat non provident, sunt in culpa qui</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2 text-center px-3 py-3">
+                            <div class="service__item deep-bg" style="background-color: #FFB73E;">
+                                <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist1.png')%>">
+                                <h4>Excepteur sint</h4>
+                                <p>occaecat cupidatat non provident, sunt in culpa qui</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2 text-center">
-                            <div class="service__item">
-                                <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist4.png')%>">
-                                <h4>Clubs and bar</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-4 col-md-6 order-md-4 text-center">
-                            <div class="service__item deep-bg">
-                                <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist4.png')%>">
-                                <h4>DJ lessons</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-3 col-md-6 order-md-3 text-center">
-                            <div class="service__item">
-                                <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist4.png')%>">
-                                <h4>Corporate events</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                        <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2 text-center px-3 py-3">
+                            <div class="service__item deep-bg" style="background-color: #A84A1F;">
+                                <img class="mt-4" style="border-radius: 50%; width: 50%; height: 60%;" src="<%= asset_url('artist1.png')%>">
+                                <h4>Excepteur sint</h4>
+                                <p>occaecat cupidatat non provident, sunt in culpa qui</p>
                             </div>
                         </div>
                     </div>
@@ -630,10 +650,4 @@
     <%= javascript_include_tag 'jquery.jplayer.min' %>
     <%= javascript_include_tag 'jplayerInit' %>
 
-    
-
-
-    
 </body>
-
-</html>

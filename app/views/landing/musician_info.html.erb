@@ -1,5 +1,12 @@
 <title>musician info</title>
 <style>
+  
+  body{
+    padding: 0;  
+    margin: 0;
+  }
+
+
     section h2{
         font-weight: 700;
         font-size: 2.5rem;
@@ -12,6 +19,7 @@
     .bio p span {
         font-weight: 600;
     }
+  
     .related-videos img{
         -webkit-box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
     box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
@@ -19,6 +27,7 @@
      .related-videos h2, .related-artists h2{
         position: relative;
         left: 10%;
+        margin-right: 10%;
      }
   .related-videos .col{
     min-width: 320px;
@@ -91,16 +100,62 @@
     margin-left: 8vw;
     margin-right: 8vw;
   }
- 
+
+  .related-videos img:hover{
+    border-radius: 0.1rem;
+    transform: scale(1.1);
+	  transition: .3s ease-in-out; 
+  }
+
+  .related-videos img {
+transition: .5s ease;
+transform: scale(1);
+}
+
+  .related-artists .card:hover{
+    border-radius: 0.1rem;
+    transform: scale(1.05);
+	  transition: .3s ease-in-out; 
+  }
+
+  .related-artists .card {
+transition: .5s ease;
+transform: scale(1);
+}
+
+
+  @media only screen and (max-width: 576px){
+  .bio{
+    width: 90%;
+  }
+ .bio .row{
+padding: 1.5rem 0 !important;
+ }
+ .bio p{
+  padding: 0 !important;
+  font-size: 1rem;
+ }
+ .bio p:last-child{
+  padding-bottom: 1.5rem !important;
+ }
+ section h2{
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+    .bio .name{
+text-align: center;
+padding-top: 2rem;
+    }
+}
 </style>
 
 <body class="bg-light">
     <section class="container bio my-5 bg-white">
         <div class="row d-flex g-4 px-5 py-4">
-            <div class="col-6">
+            <div class="col-md-6 ">
                 <img src="/assets/Musicians/Zakir-Hussain.jpg" class="bio-img" alt="Zakir Hussain">
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <h2 class="name mt-3 ">Zakir Hussain</h2>
             </div>
         </div>
@@ -122,11 +177,11 @@
             Padma Bhushan, solidifying his status as a pioneer of world music.</p>
     </section>
 
-    <section class="related-videos  mb-5 px-5">
-        <div class="row">
+    <section class="related-videos  mb-5 container">
+        <div class="row ">
             <div class="col-lg-12">
-                <h2 class="mb-3">Videos</h2>
-                <hr>
+                <h2>Videos</h2>
+                <hr class="mt-0">
             </div>
         </div>
 
@@ -139,8 +194,8 @@
     <section class="related-artists container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="mb-3">Tabla Artists</h2>
-                <hr>
+                <h2 >Tabla Artists</h2>
+                <hr class="mt-0">
             </div>
         </div>
         

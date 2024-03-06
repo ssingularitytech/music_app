@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'landing/artists'
   get 'landing/instrument'
   get 'landing/musician_info'
+  get 'landing/instrument'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -30,6 +30,8 @@
 
 /* Template default CSS
 /*----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 @font-face {
 	font-family: "Rockville Solid Regular";
 	src: url(/assets/Rockville-Solid.woff) format("truetype");
@@ -420,11 +422,11 @@ ol {
 .bg_text {
 	text-align: left;
 	background-color: #F9EDC8;
-	opacity: 0.7;
+	opacity: 0.9;
 	border-top-left-radius: 70px;
 	border-bottom-left-radius: 70px;
-	/* font-size: 40px; */
-	font-weight: 600;
+	/* font-size: 2rem; */
+	/* font-weight: 600; */
 }
 
 /* .hero__text span {
@@ -2638,7 +2640,7 @@ ol {
 
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1170px;
+		max-width: 1449px;
 	}
 }
 
@@ -2952,6 +2954,8 @@ ol {
 	}
 }
 
+
+/* spd */
 .image-container {
     position: relative;
     text-align: center;
@@ -2969,3 +2973,5 @@ ol {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+

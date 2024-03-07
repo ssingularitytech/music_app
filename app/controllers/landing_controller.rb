@@ -9,6 +9,8 @@ class LandingController < ApplicationController
   end
 
   def instrument_info
+  end
+    
   def about
   end
 end

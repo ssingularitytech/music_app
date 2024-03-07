@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'landing/index'
+  root 'landing#index'
   get 'landing/artists'
-  get 'landing/instrument'
   get 'landing/musician_info'
+  get 'landing/about'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

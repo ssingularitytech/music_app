@@ -278,7 +278,7 @@ ol {
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 9;
+	z-index: 5;
 	opacity: 0.5;
 }
 
@@ -288,7 +288,7 @@ ol {
 }
 
 .header__logo {
-	padding: 29px 0 25px;
+	padding: 20px 0 25px;
 	align-items: start;
 }
 

@@ -7,4 +7,7 @@ class LandingController < ApplicationController
 
   def musician_info
   end
+
+  def about
+  end
 end

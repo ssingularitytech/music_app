@@ -1,0 +1,32 @@
+<!-- Employee Details Showing -->
+<div class="flex-column" style="height:100vh;">
+  <!--Error Message-->
+  <% if flash[:errors] %>
+    <% flash.each do |name,message| %>
+      <p class="text-danger"><%= message%></p>
+    <% end %>
+  <% end %>
+  <div class="d-flex">
+    <div class="m-5" >
+      <div class="card bg-light border-warning shadow">
+        <div class="card-body">
+          <div class="card-header">
+            <h2 class="text-center">Musician Details</h2>
+          </div>
+          <div>
+            <h2>ID: <%= @musician.id %> </h2>
+             <h2>Image: <%= @musician.image %> </h2>
+            <h2> Musician Name: <%= @musician.name %> </h2>
+            <h2> Date of Birth: <%= @musician.dob %> </h2>
+            <h2> Description: <%= @musician.description %> </h2>
+          </div>
+          <div class="d-flex">
+            <%= button_to "Edit" , edit_musician_path, method: :get ,class:"btn-success border-0 rounded-pill shadow  px-4 m-2 py-2" %>
+            <%= button_to "Delete", musician_path, method: :delete ,class:"btn-danger border-0 rounded-pill shadow p-2 m-2" %>
+            <%= button_to "View all", musicians_path,method: :get ,class:"btn-primary border-0 rounded-pill shadow p-2 m-2" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

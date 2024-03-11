@@ -8,12 +8,12 @@
   <% end %>
   
   <!-- Employee Cards -->
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 px-5 mt-3">
     <% @musicians.each do |m| %>
-      <div class="col">
+      <div class="col mt-4">
         <div class="card h-100">
-          <img src="<%= m.image %>" class="card-img-top">
           <div class="card-body">
+             <%= image_tag m.image, class: "card-img-top" if m.image.attached? %>
             <h5 class="card-title"><%= m.name %></h5>
             <p class="card-text"><strong>Date of Birth:</strong> <%= m.dob %></p>
             <p class="card-text"><strong>Description:</strong> <%= m.description %></p>

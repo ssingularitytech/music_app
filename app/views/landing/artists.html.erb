@@ -1,30 +1,46 @@
 <title>artists</title>
 <style>
-  .card-container .row{
+  * {
+    box-sizing: border-box;
+  }
+
+  .container{
+    max-width: 1170px;
+  }
+  .card-container .row {
     padding-top: 3rem;
-   }
-.card-container  .col {
+    justify-content: center;
+  }
+
+  .card-container .col {
     min-width: 270px;
-    max-width: 290px;
-    margin: 0 auto;
+    max-width: 360px;
   }
 
   .card-container .card {
     -webkit-box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
     box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
-    height: 440px;
     border-radius: 0;
     border: none;
   }
 
+  .artist_pic {
+    position: relative;
+    height: 300px;
+  }
+
   .card img {
-    height: 200px;
+    min-width: 100%;
+    max-width: 330px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0;
   }
 
   .card-body {
-    text-align: center;
-    padding:  10px;
+    padding: 45px 10px 25px;
+    text-align: start;
+    height: 170px;
   }
 
   .card-body h5 {
@@ -34,178 +50,223 @@
   }
 
   .card__btn {
-
-    position: relative;
-    top: 30px;
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    padding: 1rem 0.1rem;
+    width: 50%;
+    padding: 0.5rem 0.2rem;
     font-size: 1rem;
     text-align: center;
-    color: #3363ff;
-    background-color: #e6ecff;
-    border: none;
-    border-radius: 0.4rem;
-    transition: 0.2s;
+    background-color: white;
+    border: 0.1rem solid red;
     cursor: pointer;
   }
 
-  .card__btn span {
-    margin-left: 1rem;
-    transition: 0.2s;
+  .read-more-btn {
+    position: absolute;
+    left: 0;
+    bottom: -21px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card__btn a {
+    color: #000000;
   }
 
   .card__btn:hover,
   .card__btn:active {
     background-color: #dce4ff;
   }
-
-  .card__btn:hover span,
-  .card__btn:active span {
-    margin-left: 1.5rem;
-  }
 </style>
 
 
-  <%= render partial: "layouts/header"%>
-<body>
-  <div class="container card-container mt-5" class="w-100">
-    <div class="row  row-cols-1 row-cols-md-4  mx-auto g-4">
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Amjad-Ali-Khan.jpeg" class="card-img-top" alt="Amjad Ali Khan">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Amjad Ali Khan</h5>
-            <p class="card-text">Sarod maestro has played a crucial role in popularizing the instrument worldwide.
-            </p>
-            <button class="card__btn"><a href="musician_info">Read More.. </a><span>&rarr;</span></button>
+<%= render partial: "layouts/header" %>
+
+  <body>
+    <div class="container card-container mt-5" class="w-100">
+      <div class="row">
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Amjad-Ali-Khan.jpeg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Amjad Ali Khan</h5>
+              <p class="card-text">Sarod maestro has played a crucial role in popularizing the instrument worldwide.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Anoushka-Shankar.jpeg" class="card-img-top" alt="Anoushka Shankar">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Anoushka Shankar</h5>
-            <p class="card-text"> Sitar player and composer, known for exploring new musical territories.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Anoushka-Shankar.jpeg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Anoushka Shankar</h5>
+              <p class="card-text"> Sitar player and composer, known for exploring new musical territories.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Bismillah-Khan.jpeg" class="card-img-top" alt="Bismillah Khan">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Bismillah Khan</h5>
-            <p class="card-text">Shehnai maestro, credited with elevating the shehnai to a classical concert stage
-              instrument.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Bismillah-Khan.jpeg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bismillah Khan</h5>
+              <p class="card-text">Shehnai maestro, credited with elevating the shehnai to a classical concert stage
+                instrument.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Hariprasad-Chaurasia.jpeg" class="card-img-top" alt="Hariprasad Chaurasia">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Hariprasad Chaurasia</h5>
-            <p class="card-text">A globally acclaimed flutist, celebrated for his performances in Indian classical music.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Hariprasad-Chaurasia.jpeg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Hariprasad Chaurasia</h5>
+              <p class="card-text">A globally acclaimed flutist, celebrated for his performances in Indian classical
+                music.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Kadri-Gopalnath.webp" class="card-img-top" alt="Kadri Gopalnath">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Kadri Gopalnath</h5>
-            <p class="card-text">Pioneer of Carnatic music on the saxophone.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Kadri-Gopalnath.webp" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Kadri Gopalnath</h5>
+              <p class="card-text">Pioneer of Carnatic music on the saxophone.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/L-Subramaniam.jpeg" class="card-img-top" alt="L. Subramaniam">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">L. Subramaniam</h5>
-            <p class="card-text">Renowned violinist known for his contributions to both Indian and Western classical music.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/L-Subramaniam.jpeg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">L. Subramaniam</h5>
+              <p class="card-text">Renowned violinist known for his contributions to both Indian and Western classical
+                music.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/ravi-shankar.jpg" class="card-img-top" alt=" Ravi Shankar">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title"> Ravi Shankar</h5>
-            <p class="card-text"> Pioneering sitar virtuoso who introduced Indian classical music to the Western world.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/ravi-shankar.jpg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> Ravi Shankar</h5>
+              <p class="card-text"> Pioneering sitar virtuoso who introduced Indian classical music to the Western
+                world.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Ronu-Majumdar.jpeg" class="card-img-top" alt="Ronu Majumdar">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title"> Ronu Majumdar</h5>
-            <p class="card-text">A leading figure in Indian classical flute music.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Ronu-Majumdar.jpeg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> Ronu Majumdar</h5>
+              <p class="card-text">A leading figure in Indian classical flute music.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Shivkumar-Sharma.jpg" class="card-img-top" alt=" Shivkumar Sharma">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title"> Shivkumar Sharma</h5>
-            <p class="card-text">A santoor maestro who popularized the instrument in Indian classical music.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Shivkumar-Sharma.jpg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> Shivkumar Sharma</h5>
+              <p class="card-text">A santoor maestro who popularized the instrument in Indian classical music.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/U-Srinivas.jpeg" class="card-img-top" alt="U. Srinivas">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">U. Srinivas</h5>
-            <p class="card-text">A child prodigy who revolutionized the mandolin in Indian classical music.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/U-Srinivas.jpeg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">U. Srinivas</h5>
+              <p class="card-text">A child prodigy who revolutionized the mandolin in Indian classical music.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Vishwa-Mohan-Bhatt.jpg" class="card-img-top" alt=" Vishwa Mohan Bhatt">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title"> Vishwa Mohan Bhat</h5>
-            <p class="card-text">Grammy Award-winning musician known for inventing the Mohan Veena.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Vishwa-Mohan-Bhatt.jpg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> Vishwa Mohan Bhat</h5>
+              <p class="card-text">Grammy Award-winning musician known for inventing the Mohan Veena.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col mt-5">
-        <div class="card">
-          <img src="/assets/Musicians/Zakir-Hussain.jpg" class="card-img-top" alt="Zakir Hussain">
-          <div class="card-body card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Zakir Hussain</h5>
-            <p class="card-text">World-renowned tabla player, known for his exceptional skill and contributions to world
-              music.
-            </p>
-            <button class="card__btn">Read More.. <span>&rarr;</span></button>
+        <div class="col col-lg-4 col-md-6 col-sm-6 mt-5">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="/assets/Musicians/Zakir-Hussain.jpg" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <button class="card__btn"><a href="musician_info">Read More.. </a></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Zakir Hussain</h5>
+              <p class="card-text">World-renowned tabla player, known for his exceptional skill and contributions to world music.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>

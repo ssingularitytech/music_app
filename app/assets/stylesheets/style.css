@@ -2974,4 +2974,13 @@ ol {
     transform: translate(-50%, -50%);
 }
 
-
+@media only screen and (max-width: 767px) {
+	.accordion-header{
+		padding: 0px !important;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.content{
+		padding: 0px !important;
+	}
+}

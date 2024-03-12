@@ -6,13 +6,13 @@
         <div class="card">
           <div class="card-body">
             <%= image_tag a.image, class: "card-img-top img-fluid", style: "height: 20rem; width: 32rem;" if a.image.attached? %>
-            <h5 class="card-title"><b><%= a.name %></b></h5>
+            <h5 class="card-title mt-1"><b><%= a.name %></b></h5>
             <p class="card-text"><strong>Date of Birth:</strong> <%= a.date_of_birth %></p>
             <p class="card-text"><strong>Description:</strong> <%= a.description %></p>
             <!-- <%= button_to "Show", artist_path(a), method: :get, class: "btn btn-success btn-block" %> -->
-            <div class="row d-flex justify-content-between">
-              <%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block px-4" %>
-              <%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %>
+            <div class="row text-center" style="justify-content: center;">
+              <%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block px-5" %>
+              <!-- <%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %> -->
             </div>
           </div>
         </div>

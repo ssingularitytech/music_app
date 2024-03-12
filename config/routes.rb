@@ -8,13 +8,6 @@ Rails.application.routes.draw do
   # get 'artists/destroy'
   resources :artists
   
-  # get 'musicians/index'
-  # get 'musicians/new'
-  # get 'musicians/create'
-  # get 'musicians/show'
-  # get 'musicians/edit'
-  # get 'musicians/update'
-  # get 'musicians/destroy'
   resources :musicians
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'landing#index'

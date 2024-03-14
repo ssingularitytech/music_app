@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  # get 'artists/index'
-  # get 'artists/new'
-  # get 'artists/create'
-  # get 'artists/show'
-  # get 'artists/edit'
-  # get 'artists/update'
-  # get 'artists/destroy'
-  resources :artists
+  get '/artists', to: 'artists#index', as: :artists
+  get '/artists/new', to: 'artists#new', as: :new_artist
+  post '/artists', to: 'artists#create'
+  get '/artists/:id', to: 'artists#show', as: :artist
+  get '/artists/:id/edit', to: 'artists#edit', as: :edit_artist
+  patch '/artists/:id', to: 'artists#update'
+  delete '/artists/:id', to: 'artists#destroy', as: :destroy_artist
+  # resources :artists
   
   resources :musicians
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

@@ -1,19 +1,39 @@
 
-<div class="container-fluid">
+<style>
+  /* .row{
+    justify-content: center;
+  } */
+  .read-more-btn {
+    position: absolute;
+    left: 0;
+    top: 304px;
+    width: 100%;
+    text-align: center;
+  }
+</style>
+<div class="container">
   <div class="row mt-2">
     <% @artists.each do |a| %>
-      <div class="col-md-4 mb-4">
+      <div class="col-4 mb-4">
         <div class="card">
-          <div class="card-body">
-            <%= image_tag a.image, class: "card-img-top img-fluid", style: "height: 20rem; width: 32rem;" if a.image.attached? %>
-            <h5 class="card-title"><b><%= a.name %></b></h5>
+          <div class="card-body px-0 py-0">
+            <% if a.image.attached? %>
+              <img src="<%= url_for(a.image) %>" class="card-img-top img-fluid" style="height: 20rem; width: 100%;">
+            <% end %>
+            <div class="read-more-btn">
+              <!-- <button class="card__btn"><a href="musician_info">Read More.. </a></button> -->
+              <%= button_to "Read More..", artist_path(a), method: :get, class: "" %>
+            </div>
+            <div class="px-4 py-2">
+            <p class="card-text"><strong><%= a.name %></strong></p>
             <p class="card-text"><strong>Date of Birth:</strong> <%= a.date_of_birth %></p>
             <p class="card-text"><strong>Description:</strong> <%= a.description %></p>
-            <!-- <%= button_to "Show", artist_path(a), method: :get, class: "btn btn-success btn-block" %> -->
-            <div class="row d-flex justify-content-between">
-              <%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block px-4" %>
-              <%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %>
+             <!-- <%= button_to "Show", artist_path(a), method: :get, class: "btn btn-success btn-block" %> -->
+            <div class="row text-center" style="justify-content: center;">
+            <%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block px-5" %>
+            <!-- <%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %> -->
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -23,6 +43,7 @@
     <%= button_to "Add New Artist", new_artist_path, method: :get ,class:"btn-warning border-0 rounded shadow p-3 m-3" %>
   </div>
 </div>
+
 
 
 

@@ -37,7 +37,7 @@ class ArtistsController < ApplicationController
   def destroy
     if @artist.delete
       flash[:errors] = 'Artist Deleted Successfully'
-      redirect_to root_path(@artist)
+      redirect_to artists_path(@artist)
     else
       flash[:errors] = @artist.errors.full_messages
       redirect_to destroy_artist_path

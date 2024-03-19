@@ -1,0 +1,27 @@
+
+<div class="container-fluid">
+  <div class="row mt-2">
+    <% @instruments.each do |a| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <%= image_tag a.image, class: "card-img-top img-fluid", style: "height: 20rem; width: 32rem;" if a.image.attached? %>
+            <h5 class="card-title"><b><%= a.name %></b></h5>
+            <p class="card-text"><strong>Description:</strong> <%= a.description %></p>
+            <!-- <%= button_to "Show", artist_path(a), method: :get, class: "btn btn-success btn-block" %> -->
+            <div class="row d-flex justify-content-between">
+              <%= button_to "Edit", edit_instrument_path(a), method: :get, class: "btn btn-primary btn-block px-4" %>
+              <%= button_to "Delete", instrument_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+    <div class=" text-center">
+    <%= button_to "Add New Instrument", new_instrument_path, method: :get ,class:"btn-warning border-0 rounded shadow p-3 m-3" %>
+  </div>
+</div>
+
+
+

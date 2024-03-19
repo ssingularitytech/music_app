@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  # get 'instruments/index'
+  # get 'instruments/new'
+  # get 'instruments/create'
+  # get 'instruments/show'
+  # get 'instruments/edit'
+  # get 'instruments/update'
+  # get 'instruments/destroy'
+  resources :instruments
   get '/artists', to: 'artists#index', as: :artists
   get '/artists/new', to: 'artists#new', as: :new_artist
   post '/artists', to: 'artists#create'

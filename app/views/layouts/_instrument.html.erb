@@ -1,0 +1,49 @@
+
+<style>
+  /* .row{
+    justify-content: center;
+  } */
+  .read-more-btn {
+    position: absolute;
+    left: 0;
+    top: 304px;
+    width: 100%;
+    text-align: center;
+  }
+</style>
+<%= render partial: "layouts/header"%>
+<div class="container" style="margin-top: 10rem;">
+  <div class="row mt-2">
+    <% @instruments&.each do |i| %>
+      <div class="col col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body px-0 py-0">
+            <% if i.image.attached? %>
+              <img src="<%= url_for(i.image) %>" class="card-img-top img-fluid" style="height: 20rem; width: 100%;">
+            <% end %>
+            <div class="read-more-btn">
+              <!-- <button class="card__btn"><a href="musician_info">Read More.. </a></button> -->
+              <%= button_to "Read More..", instrument_path(i), method: :get, class: "" %>
+            </div>
+            <div class="px-4 py-2">
+            <p class="card-text"><strong><%= i.name %></strong></p>
+            <p class="card-text"><strong>Description:</strong> <%= i.description %></p>
+             <!-- <%= button_to "Show", artist_path(i), method: :get, class: "btn btn-success btn-block" %> -->
+            <div class="row d-flex">
+            <div class="col-md-6"><%= button_to "Edit", edit_instrument_path(i), method: :get, class: "btn btn-primary btn-block px-5" %></div>
+            <div class="col-md-6"><%= button_to "Delete", instrument_path(i), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %></div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+    <div class=" text-center">
+    <%= button_to "Add New Instrument", new_instrument_path, method: :get ,class:"btn-warning border-0 rounded shadow p-3 m-3" %>
+  </div>
+</div>
+
+
+
+

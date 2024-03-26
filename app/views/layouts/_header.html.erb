@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-            <header class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2">
-                        <div class="header__logo" style="opacity: 1;">
-                            <%# <a href="index.html.erb"> %>
-                                 <%# <%= image_tag 'websiteicon.jpg', alt: 'Logo' %>
-                                <%# <h2>LOGO</h2> %>
-                            <%# </a> %>
-                            <%= image_tag 'websiteicon.jpg', alt: 'Logo' %>
-                        </div>
-                    </div>
-                    <div class="col-lg-10 col-md-10">
-                        <div class="header__nav">
-                            <nav class="header__menu mobile-menu">
-                                <ul>
-                                    <li class="active"><a href="/">Home</a></li>
-                                    <li><a href="/landing/about">About</a></li>
-                                    <li><a href="/landing/artists">Artist</a></li>
-                                    <li><a href="./tours.html">Instrument</a></li>
-                                    <li><a href="./videos.html">Videos</a></li>
-                                    <li><a href="./contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div id="mobile-menu-wrap"></div>
+    <header class="wrapper bimage">
+        <h1 class="logo">Amazing Musicians</h1>
+        <h1 class="logo_2">AM</h1>
+        <div class="login_btn">
+            <a class="cta" href=""><button class="btn_sign btn_2">Login</button></a>
+        </div>
+        <div class="login_btn">
+            <a class="cta" href=""><button class="btn_sign">Sign Up</button></a>
+        </div>
+    </header>
+
+    <div class="main_dropdown_container">
+        <div class="dropdown_logo_bar_li" onclick="toggle_bar()" id="toggle_bar"><i
+                class="fas fa-bars dropdown_logo_bar bar "></i></div>
+        <nav class="navbar_container toggle">
+            <div class="main_navbar">
+                <ul class="main_navbar_ul">
+                    <li class="navbar_level_1_li"><a href="/" class="navbar_level_1_link">HOME</a></li>
+                    <li class="navbar_level_1_li"><a href="/landing/about" class="navbar_level_1_link">ABOUT</a></li>
+                    <li class="navbar_level_1_li"><a href="/landing/artists" class="navbar_level_1_link">ARTISTS</a></li>
+                    <li class="navbar_level_1_li"><a href="/landing/instruments" class="navbar_level_1_link">INSTRUMENTS</a></li>
+                    <li class="navbar_level_1_li"><a href="/landing/instruments" class="navbar_level_1_link">CONTACT US</a></li>
+                    <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">LOGIN</a></li>
+                    <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">SIGN UP</a></li>
+                </ul>
             </div>
-        </header>
+
+        </nav>
+    </div>
+
+    <script>
+
+        let toggle = document.getElementsByClassName('toggle_bar');
+
+        function toggle_bar() {
+
+            let element = document.querySelector(".toggle");
+            element.classList.toggle("show")
+
+            let element2 = document.querySelector(".bar")
+            element2.classList.toggle("bar2")
+
+        }
+
+    </script>
 </body>
+
 </html>

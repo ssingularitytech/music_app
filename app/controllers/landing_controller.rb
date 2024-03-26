@@ -5,10 +5,16 @@ class LandingController < ApplicationController
   def artists
   end
 
+  def instruments
+  end
+
   def musician_info
   end
 
   def instrument_info
+  end
+
+  def navbar
   end
     
   def about

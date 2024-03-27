@@ -30,7 +30,7 @@
             <p class="card-text"><strong>Description:</strong> <%= i.description %></p>
              <!-- <%= button_to "Show", artist_path(i), method: :get, class: "btn btn-success btn-block" %> -->
             <div class="row d-flex">
-            <div class="col-md-6"><%= button_to "Edit", edit_instrument_path(i), method: :get, class: "btn btn-primary btn-block px-5" %></div>
+            <div class="col-md-6"><%= button_to "Edit", edit_instrument_path(i), method: :get, class: "btn btn-primary btn-block" %></div>
             <div class="col-md-6"><%= button_to "Delete", instrument_path(i), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %></div>
             </div>
           </div>

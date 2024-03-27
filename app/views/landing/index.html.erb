@@ -6,65 +6,13 @@
 
         }
 
-        .tagline h2{
-            color:#531129;
-            font-size: 2.5rem;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-            font-family: "Kaushan Script";
-        }
-
-        .tabs {
-            display: flex;
-            list-style: none;
-            padding: 0;
-        }
-
-        .tab {
-            cursor: pointer;
-            padding: 15px;
-            background-color: #FFFBDC;
-            border: 2px solid #5B0A22;
-            border-radius: 4rem;
-            color: #5B0A22;
-            font-size: 1.3rem;
-            font-weight: bolder;
-        }
-
-        .tab.active {
-            background-color: #FFB73E;
-        }
-
-        .tab-content {
-            display: none;
-            padding: 1rem 3rem;
-            color: #FFFBDC;
-            text-align: justify;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-        .about-content{
-            background-color: #5B0A22;  
-            padding: 1rem;
-        }
-        .boundary-line{
-            border: 4px solid #FFB73E;
-        }
+        
     </style>
     <body>
-        <section class="landing-carousel mb-3">
+        <section class="landing-carousel mb-3 mt-3">
             <div class="container-fluid" style="margin-top: -1rem;">
                 <div class="row">
-                    <div class="col-md-3 left-text">
-                        <div class="text">
-                        <p> Pratap's </p>
-                        <p><span> Amazing <br> Musicians</span></p>
-                    </div>
-                    </div>
-                    <div class="col-md-9 right-carousel">
+                    <div class="col-lg-9 order-lg-2 right-carousel">
                         <div class="slide-container">
                             <div class="slide">
                                 <img src="<%= asset_url('backgroundimage.png')%>">
@@ -76,19 +24,25 @@
                                 <img src="<%= asset_url('test.jpg')%>">
                             </div>
                             <div class="slide">
-                                <img src="<%= asset_url('mainmusicianimage.png')%>">
+                                <img src="<%= asset_url('carousel_event.jpeg')%>">
                             </div>
                             <div class="slide">
                                 <img src="<%= asset_url('countdown-bg.jpg')%>">
                             </div>
-
+                    
                             <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
                             <span class="arrow next" onclick="controller(1)">&#10095;</span>
                         </div>
                     </div>
+                    <div class="col-lg-3 order-lg-1 left-text">
+                        <div class="text">
+                            <p> Pratap's </p>
+                            <p><span> Amazing <br> Musicians</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
+            
         </section>
         
         <!-- content tab -->
@@ -96,17 +50,17 @@
             <div class="tagline">
                 <h2>Harmonizing Excellence - A Celebration of Instrumental Mastery</h2>
             </div>
-            <div class="row d-flex mt-2 px-5">
-                <div class="tab col-md-3 text-center py-3" onclick="showTab('tab1')">
+            <div class="row d-flex mt-2 px-3">
+                <div class="tab w-25 col-md-3 text-center " onclick="showTab('tab1')">
                     What?
                 </div>
-                <div class="tab col-md-3 text-center py-3" onclick="showTab('tab2')">
+                <div class="tab w-25 col-md-3 text-center " onclick="showTab('tab2')">
                     Why?
                 </div>
-                <div class="tab col-md-3 text-center py-3" onclick="showTab('tab3')">
+                <div class="tab w-25 col-md-3 text-center " onclick="showTab('tab3')">
                     Who?
                 </div>
-                <div class="tab col-md-3 text-center py-3" onclick="showTab('tab4')">
+                <div class="tab w-25 col-md-3 text-center " onclick="showTab('tab4')">
                     How?
                 </div>
             </div>
@@ -114,7 +68,7 @@
     <div class="about-content">
         <div class="boundary-line">
         <!-- What -->
-        <div class="tab-content mt-3" id="tab1">
+        <div class="tab-content mt-3" style="margin-top: 0 !important;" id="tab1">
             In the heart of every melody and the soul of every composition lies the untold story of an 
             instrumentalist. Pratap's Amazing Musicians, a pioneering initiative by the Shailaja Nair 
             Foundation, supported by FEI Cargo, aims to bring these stories to the forefront. At its core, this 
@@ -296,18 +250,18 @@
         <section class="services mt-3">
             <div class="container-fluid mt-3">
                 <div class="row" style="display: flex; justify-content: flex-end;">
-                    <div class="col-6 pl-4 d-none d-md-block">
+                    <div class="col-6 pl-4 d-none d-">
                         <p
                             style="font-family: 'Kaushan Script', cursive; border-bottom: 1px solid black; font-size: 30px;">
                             MUSICIANS DIRECTORY</p>
                     </div>
-                    <div class="col-1 d-none d-md-block" style="display: flex; justify-content: flex-end;">
+                    <div class="col-1 d-none d-" style="display: flex; justify-content: flex-end;">
                         <button class="py-2" style="border: 2px solid red; background-color: white;"><a href="/artists"
                                 style="text-decoration: none; color: black;">View more</a></button>
                     </div>
                 </div>
 
-                <div class="row d-md-none d-block d-flex mb-2">
+                <div class="row d-md-none d-flex mb-2">
                     <div class="col-6">
                         <p
                             style="font-family: 'Kaushan Script', cursive; border-bottom: 1px solid black; font-size: 30px;">

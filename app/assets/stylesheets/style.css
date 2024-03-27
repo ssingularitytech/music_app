@@ -420,6 +420,7 @@ ol {
 /*---------------------
   Carousel Slider
 -----------------------*/
+
 .left-text {
 	display: flex;
 	justify-content: center;
@@ -431,11 +432,11 @@ ol {
 	text-align: center;
 }
 
-.col-md-9,
+/* .col-md-9,
 .col-md-3 {
 	padding: 0 !important;
-}
-.left-text p:first-child{
+} */
+.left-text p:first-child {
 	margin-bottom: 0 !important;
 	position: relative;
 	color: #531129;
@@ -444,7 +445,7 @@ ol {
 	line-height: 3rem;
 }
 
-.left-text p:last-child span{
+.left-text p:last-child span {
 	font-family: "Kaushan Script";
 	color: #5B0A22;
 	font-weight: 400;
@@ -452,27 +453,37 @@ ol {
 	line-height: 3.5rem;
 	margin-bottom: 2rem;
 }
+
 .slide-container {
 	position: relative;
 	width: 100%;
+	overflow: hidden;
+}
+
+.slide {
+	display: none;
+	height: 100%;
 }
 
 .slide img {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	object-fit: cover;
 }
+
+
 
 .arrow {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
 	color: black;
-	background-color: rgb(255, 255, 255, 0.7);
-	padding: 8px 19px;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 8px 20px;
 	border-radius: 50%;
 	font-size: 25px;
 	font-weight: bold;
+	z-index: 1;
 }
 
 .next {
@@ -483,9 +494,201 @@ ol {
 	left: 10px;
 }
 
-.slide {
-	display: none;
+/* Media queries for responsive left-text on carousel section */
+@media (max-width: 1150px) {
+	.left-text p:first-child {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+
+	.left-text p:last-child span {
+		font-size: 3.5rem;
+		line-height: 3rem;
+	}
+
 }
+
+@media (max-width: 992px) {
+	.left-text p:first-child {
+		margin-top: 2.5rem;
+		font-size: 4rem;
+		line-height: 3.5rem;
+	}
+
+	.left-text p:last-child span {
+		font-size: 5.5rem;
+		line-height: 4rem;
+	}
+
+}
+
+@media (max-width: 576px) {
+	.left-text p:first-child {
+		margin-top: 2.5rem;
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
+
+	.left-text p:last-child span {
+		font-size: 4rem;
+		line-height: 3.5rem;
+	}
+
+}
+
+
+
+/* Media queries for responsive carousel height */
+@media (max-width: 767px) {
+	.slide-container {
+		height: 250px;
+		/* Set carousel height for smaller devices */
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.slide-container {
+		height: 450px;
+		/* Set carousel height for medium devices */
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.slide-container {
+		height: 500px;
+		/* Set carousel height for larger devices */
+	}
+}
+
+@media (min-width: 1201px) {
+	.slide-container {
+		height: 630px;
+		/* Set carousel height for larger devices */
+	}
+}
+
+
+/*---------------------
+ Tab Content
+-----------------------*/
+
+
+.container-fluid {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	overflow: hidden !important;
+
+}
+
+.tagline h2 {
+	color: #531129;
+	font-size: 2.5rem;
+	text-align: center;
+	padding: 2rem 1rem;
+	margin-top: 2rem;
+	font-family: "Kaushan Script";
+}
+
+.tabs {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+
+.tab {
+	cursor: pointer;
+	padding: 12px;
+	background-color: #FFFBDC;
+	border: 2px solid #5B0A22;
+	border-radius: 4rem;
+	color: #5B0A22;
+	font-size: 1.3rem;
+	font-weight: bolder;
+}
+
+
+
+.tab.active {
+	background-color: #FFB73E;
+}
+
+.tab-content {
+	display: none;
+	padding: 1rem 3rem;
+	color: #FFFBDC;
+	font-family: Open Sans;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 27px;
+	text-align: justify;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+.about-content {
+	background-color: #5B0A22;
+	padding: 1rem;
+}
+
+.boundary-line {
+	border: 4px solid #FFB73E;
+}
+
+@media (max-width: 768px) {
+	.tagline h2 {
+		font-size: 2rem;
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 425px) {
+	.tagline h2 {
+		font-size: 1.5rem;
+	}
+	.about-content {
+		padding: 0.5rem;
+	}
+	.boundary-line {
+		border: 2px solid #FFB73E;
+	}
+}
+
+@media (max-width: 922px) {
+	.tab {
+		padding: 12px;
+		font-size: 1rem;
+		font-weight: bold;
+		border-radius: 4rem;
+	}
+	.tab-content {
+		padding: 1rem;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 21px;
+	}
+}
+
+@media (max-width: 576px) {
+	.tab {
+		padding: 8px;
+		font-size: 1rem;
+		font-weight: bold;
+		border-radius: 6rem;
+	}
+}
+
+@media (max-width: 425px) {
+	.tab {
+		padding: 5px;
+		font-weight: bold;
+		border-radius: 6rem;
+	}
+}
+
+
+
 
 .linear__icon {
 	position: absolute;
@@ -574,14 +777,14 @@ ol {
 .event__item {
 	-webkit-box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
 	box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
-	
+
 }
 
 .event__item__pic {
 	height: 360px;
 	position: relative;
-	background-size: cover; 
-    background-position: center; 
+	background-size: cover;
+	background-position: center;
 }
 
 .event__item__pic .tag-date {

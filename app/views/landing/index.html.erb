@@ -198,20 +198,21 @@
                 </div>
                 <div class="row">
                     <div class="event__slider owl-carousel">
+                     <% @events.each do |a| %>
                         <div class="col-lg-4 w-100">
                             <div class="event__item">
-                                <div class="event__item__pic set-bg" data-setbg="/assets/Amjad-Ali-Khan.jpeg">
+                                <div class="event__item__pic set-bg" data-setbg="<%= url_for(a.image) %>">
                                     <div class="tag-date">
-                                        <span>Mar 15, 2024</span>
+                                        <span><%= a.event_date %></span>
                                     </div>
                                 </div>
                                 <div class="event__item__text">
-                                    <h4> Amjad Ali Khan</h4>
-                                    <p><i class="fa fa-map-marker"></i>Prithvi Theatre Janki Kutir Juhu Church Road</p>
+                                    <h4><%= a.event_name %></h4>
+                                    <p><i class="fa fa-map-marker"></i><%= a.event_location %></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 w-100">
+                        <!-- <div class="col-lg-4 w-100">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="/assets/Anoushka-Shankar.jpeg">
                                     <div class="tag-date">
@@ -224,8 +225,8 @@
                                         Point</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 w-100">
+                        </div> -->
+                        <!-- <div class="col-lg-4 w-100">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="/assets/Bismillah-Khan.jpeg">
                                     <div class="tag-date">
@@ -237,8 +238,8 @@
                                     <p><i class="fa fa-map-marker"></i>The Royal Opera House Mama Padmanand Marg</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 w-100">
+                        </div> -->
+                        <!-- <div class="col-lg-4 w-100">
                             <div class="event__item">
                                 <div class="event__item__pic set-bg" data-setbg="/assets/Shivkumar-Sharma.jpg">
                                     <div class="tag-date">
@@ -250,12 +251,12 @@
                                     <p><i class="fa fa-map-marker"></i>Bal Gandharva Rang Mandir Chruch, Bandra West</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <% end %>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Event Section End -->
 
         <!-- About Section Begin -->

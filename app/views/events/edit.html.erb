@@ -1,0 +1,40 @@
+
+<%= render partial: "layouts/header" %>
+<div class="container" style="margin-top: 10rem;">
+  <div class="row justify-content-center">
+    <div class="card shadow" style="width: 36rem;">
+    <div class="card-header">
+      <h2 class="text-center">Edit Event</h2>
+    </div>
+    <div class="card-body">
+      <!-- Error Message -->
+      <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+          <p class="text-danger"><%= error %></p>
+        <% end %>
+      <% end %>
+      <!-- Form Started Here -->
+      <%= form_with model: @event do |f| %>
+        <!-- Image -->
+        <% if @event.image.attached? %>
+          <%= image_tag @event.image, class: "card-img-top", style: "height: 20rem; width: 100%;" %>
+        <% end %>
+        <br>
+        <!-- Event Date -->
+        <%= f.label :event_date, "Enter Event Date :", class: "mt-3" %>
+        <%= f.date_field :event_date, placeholder: "Enter Event Date", class: "mb-2 form-control" %>
+        <!-- Event Date -->
+        <%= f.label :event_name, "Event Name :", class: "mt-3" %>
+        <%= f.text_field :event_name, placeholder: "Enter Event's Name", class: "mb-2 form-control" %>
+        <!-- Location -->
+        <%= f.label :event_location, "Location :", class: "mt-3" %>
+        <%= f.text_field :event_location, placeholder: "Enter Location", class: "mb-2 form-control" %>
+        <!-- Submit Button -->
+        <div class="button text-center">
+            <%= f.submit "Save Event", class: "btn-primary border-0 rounded shadow p-2 text-center px-5" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

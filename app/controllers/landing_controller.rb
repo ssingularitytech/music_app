@@ -2,6 +2,7 @@ class LandingController < ApplicationController
   def index
     @artists = Artist.all
     @instruments = Instrument.all
+    @events = Event.all
   end
 
   def artists

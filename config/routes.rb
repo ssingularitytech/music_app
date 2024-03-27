@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  # get 'events/create'
+  # get 'events/destroy'
+  # get 'events/edit'
+  # get 'events/index'
+  # get 'events/new'
+  # get 'events/show'
+  # get 'events/update'
+  resources :events
   # get 'instruments/index'
   # get 'instruments/new'
   # get 'instruments/create'

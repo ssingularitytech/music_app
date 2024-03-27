@@ -424,7 +424,6 @@ ol {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #531129;
 	background-color: #FFFBDD;
 }
 
@@ -439,22 +438,19 @@ ol {
 .left-text p:first-child{
 	margin-bottom: 0 !important;
 	position: relative;
+	color: #531129;
 	right: 50px;
 	font-size: 2.5rem;
 	line-height: 3rem;
 }
-.left-text p:nth-child(2){
+
+.left-text p:last-child span{
 	font-family: "Kaushan Script";
+	color: #5B0A22;
 	font-weight: 400;
-	font-style: normal;
 	font-size: 4rem;
 	line-height: 3.5rem;
 	margin-bottom: 2rem;
-}
-
-.left-text p:last-child {
-	font-size: 1rem;
-	padding: 0 2rem;
 }
 .slide-container {
 	position: relative;

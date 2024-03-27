@@ -9,26 +9,11 @@ class ArtistsController < ApplicationController
     @artist = Artist.new
   end
 
-  # def create
-  #   @artist = Artist.create(artist_params)
-  #   if @artist.valid?
-  #     flash[:errors] = 'Artist Created Successfully'
-  #     redirect_to artists_path
-  #   else
-  #     flash[:errors] = @artist.errors.full_messages
-  #     render :new
-  #   end
-  # end
   def create
     @artist = Artist.create(artist_params)
     if @artist.valid?
-      if Artist.count <= 4
-        flash[:notice] = 'Artist Created Successfully'
-        redirect_to root_path
-      else
-        flash[:notice] = 'Artist Created Successfully, but the maximum number of cards has been reached.'
-        redirect_to artists_path(@artist)
-      end
+      flash[:errors] = 'Artist Created Successfully'
+      redirect_to artists_path
     else
       flash[:errors] = @artist.errors.full_messages
       render :new

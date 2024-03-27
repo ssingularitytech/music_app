@@ -23,13 +23,4 @@ class LandingController < ApplicationController
   def about
   end
 
-  def update
-    if @artist.update(artist_params)
-      flash[:errors] = 'Artist Updated Successfully'
-      redirect_to artist_path(@artist)
-    else
-      flash[:errors] = @artist.errors.full_messages
-      redirect_to edit_artist_path
-    end
-  end
 end

@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   delete '/artists/:id', to: 'artists#destroy', as: :destroy_artist
   # resources :artists
   
-  resources :musicians
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'landing#index'
   get 'landing/artists'

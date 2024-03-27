@@ -10,9 +10,15 @@
     width: 100%;
     text-align: center;
   }
+    .card {
+    -webkit-box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
+    box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
+    border-radius: 0;
+    border: none;
+  }
 </style>
 <%= render partial: "layouts/header"%>
-<div class="container" style="margin-top: 10rem;">
+<div class="container" style="margin-top: 2rem;">
   <div class="row mt-2">
     <% @artists.each do |a| %>
       <div class="col col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
@@ -23,7 +29,7 @@
             <% end %>
             <div class="read-more-btn">
               <!-- <button class="card__btn"><a href="musician_info">Read More.. </a></button> -->
-              <%= button_to "Read More..", artist_path(a), method: :get, class: "" %>
+              <%= button_to "Read More..", artist_path(a), method: :get, class: "px-4 py-1" %>
             </div>
             <div class="px-4 py-2">
             <p class="card-text"><strong><%= a.name %></strong></p>

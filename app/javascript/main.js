@@ -28,36 +28,37 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    let flag = 0;
-let intervalId; // Declare intervalId globally
 
-// Automatic carousel movement
+/*------------------
+        Carousel
+    --------------------*/
+
+
+let flag = 0;
+let intervalId;
+
 function startCarousel() {
     intervalId = setInterval(() => {
         controller(1);
-    }, 3000); // Adjust the interval duration as needed (in milliseconds)
+    }, 3000);
 }
 
-// Function to start the carousel
 startCarousel();
 
-// Function to stop the carousel
 function stopCarousel() {
     clearInterval(intervalId);
 }
 
-// Event listener for previous button
 document.querySelector('.prev').addEventListener('click', () => {
-    stopCarousel(); // Stop automatic movement when button clicked
+    stopCarousel();
     controller(-1);
-    startCarousel(); // Restart automatic movement after button click
+    startCarousel();
 });
 
-// Event listener for next button
 document.querySelector('.next').addEventListener('click', () => {
-    stopCarousel(); // Stop automatic movement when button clicked
+    stopCarousel();
     controller(1);
-    startCarousel(); // Restart automatic movement after button click
+    startCarousel();
 });
 
 function controller(x) {

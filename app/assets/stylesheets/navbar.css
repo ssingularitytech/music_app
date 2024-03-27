@@ -16,14 +16,14 @@ body {
   align-items: center;
   padding: 0px 40px;
   height: 80px;
-  background-color: rgb(23, 21, 21);
+  background-color: #F9EDC8;
 }
 
 
 .logo {
   cursor: pointer;
   margin-right: auto;
-  color: white;
+  color: #531129;
   font-weight: lighter;
   font-family: my Font Regular;
 }
@@ -34,24 +34,25 @@ body {
 
 .btn_sign {
   padding: 9px 25px;
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: #531129;
+  border: 2px solid rgb(202, 189, 189);
   border-radius: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0px 7px;
-  color: #e5e5e5;
+  color: #FFB73E;
   font-weight: 300;
   align-items: flex-end;
 }
 
 
 .btn_sign:hover {
-  border: 2px solid rgb(72, 224, 164);
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .navbar_container {
-  background-color: rgb(255, 255, 255);
+  background-color: #531129;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: all 0.5s ease;
@@ -72,13 +73,17 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   transition: all 0.3s ease;
-  background-color: #ffffff;
+  background-color: #531129;
   border-bottom: 1px solid transparent;
 }
 
 
 .navbar_level_1_li {
   list-style: none;
+}
+
+.navbar_level_1_li a{
+  color: #FFB73E;
 }
 
 .navbar_container .login_btn {
@@ -92,7 +97,7 @@ body {
 
 .navbar_level_1_li:hover {
 
-  border-bottom: 1px solid #003399;
+  border-bottom: 1px solid #FFB73E;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -164,12 +169,12 @@ body {
   .main_navbar_ul {
     display: block;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #531129;
     box-shadow: 0px 30px 30px 8px rgba(0, 0, 0, 0.1);
   }
 
   .navbar_level_1_li:hover {
-    border-left: 3px solid #003399;
+    border-left: 3px solid #FFB73E;
     border-bottom: none;
     background-color: rbga(0, 0, 0, 0.3);
   }
@@ -184,7 +189,7 @@ body {
 .logo_2 {
   display: none;
   font-family: My Font Regular;
-  color: white;
+  color: #531129;
 }
 
 @media only screen and (max-width:992px) {

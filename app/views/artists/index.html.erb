@@ -1,55 +1,113 @@
 
+<title>artists</title>
 <style>
-  /* .row{
-    justify-content: center;
-  } */
-  .read-more-btn {
-    position: absolute;
-    left: 0;
-    top: 304px;
-    width: 100%;
-    text-align: center;
+  * {
+    box-sizing: border-box;
   }
-    .card {
+
+  .container{
+    max-width: 1170px;
+  }
+  .card-container .row {
+    padding-top: 1rem;
+    justify-content: center;
+    row-gap: 2.5rem;
+    column-gap: 1rem;
+  }
+
+  .card-container .col {
+    min-width: 270px;
+    max-width: 360px;
+  }
+
+  .card-container .card {
     -webkit-box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
     box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
     border-radius: 0;
     border: none;
   }
+
+  .artist_pic {
+    position: relative;
+    height: 300px;
+  }
+
+  .card img {
+    min-width: 100%;
+    max-width: 330px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .card-body {
+    padding: 45px 20px 25px;
+    text-align: start;
+    height: auto;
+  }
+
+  .card-body h5 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .card__btn {
+    width: 50%;
+    padding: 0.5rem 0.2rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: white;
+    border: 0.1rem solid red;
+    cursor: pointer;
+  }
+
+  .read-more-btn {
+    position: absolute;
+    left: 0;
+    bottom: -21px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card__btn a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .card__btn:hover,
+  .card__btn:active {
+    background-color: #effaf6;
+  }
 </style>
 <%= render partial: "layouts/header"%>
-<div class="container" style="margin-top: 2rem;">
-  <div class="row mt-2">
-    <% @artists.each do |a| %>
-      <div class="col col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body px-0 py-0">
-            <% if a.image.attached? %>
-              <img src="<%= url_for(a.image) %>" class="card-img-top img-fluid" style="height: 20rem; width: 100%;">
-            <% end %>
-            <div class="read-more-btn">
-              <!-- <button class="card__btn"><a href="musician_info">Read More.. </a></button> -->
-              <%= button_to "Read More..", artist_path(a), method: :get, class: "px-4 py-1" %>
+  <body>
+    <div class="container card-container" class="w-100">
+      <div class="row">
+        <% @artists.each do |a| %>
+        <div class="col col-lg-4 col-md-6 col-sm-6">
+          <div class="card">
+            <div class="artist_pic">
+              <img src="<%= url_for(a.image) %>" class="card-img-top" alt="Amjad Ali Khan">
+              <div class="read-more-btn">
+                <!-- <button class="card__btn"><a href="artist_path(a)">Read More.. </a></button> -->
+                <%= button_to "Read More..", artist_path(a), method: :get, class: "px-4 py-1 card__btn" %>
+              </div>
             </div>
-            <div class="px-4 py-2">
-            <p class="card-text"><strong><%= a.name %></strong></p>
-            <p class="card-text"><strong>Date of Birth:</strong> <%= a.date_of_birth %></p>
-            <p class="card-text"><strong>Description:</strong> <%= a.description %></p>
-             <!-- <%= button_to "Show", artist_path(a), method: :get, class: "btn btn-success btn-block" %> -->
-            <div class="row d-flex">
-            <div class="col-md-6"><%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block" %></div>
-            <div class="col-md-6"><%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %></div>
+            <div class="card-body">
+              <h5 class="card-title"><%= a.name %></h5>
+              <h5><%= a.date_of_birth %></h5>
+              <p class="card-text"><%= a.description %></p>
             </div>
-          </div>
           </div>
         </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-    <div class=" text-center">
-    <%= button_to "Add New Artist", new_artist_path, method: :get ,class:"btn-warning border-0 rounded shadow p-3 m-3" %>
-  </div>
-</div>
+      <div class=" text-center">
+        <%= button_to "Add New Artist", new_artist_path, method: :get ,class:"btn-warning border-0 rounded shadow p-3 m-3" %>
+      </div>
+    </div>
+  </body>
 
 
   

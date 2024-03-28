@@ -1,55 +1,43 @@
+        <section class="services mt-3">
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-lg-5 px-0 image-container">
+                        <img style="height: 100%; width: 100%;" src="<%= asset_url('mainmusicianimage.png')%>">
+                        <img class="secondimage" style="height: 40%; width: 70%;" src="<%= asset_url('bgimage.png')%>">
+                        <p class="imgtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolorum quae ut
+                            aperiam suscipit accusantium consequuntur reprehenderit praesentium aliquam veniam, officia
+                            atque error necessitatibus molestiae commodi dolor assumenda quaerat temporibus!</p>
+                    </div>
 
-<style>
-  /* .row{
-    justify-content: center;
-  } */
-  .read-more-btn {
-    position: absolute;
-    left: 0;
-    top: 304px;
-    width: 100%;
-    text-align: center;
-  }
-    .card {
-    -webkit-box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
-    box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
-    border-radius: 0;
-    border: none;
-  }
-</style>
-<div class="container" style="margin-top: 2rem;">
-  <div class="row mt-2">
-    <% @artists.each do |a| %>
-      <div class="col col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-        <div class="card">
-          <div class="card-body px-0 py-0">
-            <% if a.image.attached? %>
-              <img src="<%= url_for(a.image) %>" class="card-img-top img-fluid" style="height: 20rem; width: 100%;">
-            <% end %>
-            <div class="read-more-btn">
-              <!-- <button class="card__btn"><a href="musician_info">Read More.. </a></button> -->
-              <%= button_to "Read More..", artist_path(a), method: :get, class: "px-4 py-1" %>
-            </div>
-            <div class="px-4 py-2">
-            <p class="card-text"><strong><%= a.name %></strong></p>
-            <p class="card-text"><strong>Date of Birth:</strong> <%= a.date_of_birth %></p>
-            <p class="card-text"><strong>Description:</strong> <%= a.description %></p>
-             <!-- <%= button_to "Show", artist_path(a), method: :get, class: "btn btn-success btn-block" %> -->
-            <div class="row d-flex">
-            <!-- <div class="col-md-6"><%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block" %></div> -->
-            <!-- <div class="col-md-6"><%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %></div> -->
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-  <!-- <div class=" text-center">
-    <%= button_to "Add New Artist", new_artist_path, method: :get ,class:"btn-warning border-0 rounded shadow p-3 m-3" %>
-  </div> -->
-</div>
-
-
-
-
+                    <div class="col-lg-7 px-3">
+                        <div class="row d-flex">
+                            <div class="col-6">
+                                <p style="font-family: 'Kaushan Script', cursive; border-bottom: 1px solid black; font-size: 30px;">
+                                    MUSICIANS DIRECTORY</p>
+                            </div>
+                            <div class="col-6 " style="display: flex; justify-content: flex-end;">
+                                <button class="py-2 px-3" style="border: 2px solid red; background-color: white;"><a href="/artists"
+                                 style="text-decoration: none; color: black;">View more</a></button>
+                            </div>
+                        </div>
+                         <div class="row services__list">
+                            <% @artists.each do |a| %>
+                            <div class="col-md-6 py-3">
+                                <div style="background-color: #A84A1F;">
+                                    <div class="img text-center">
+                                        <img class="mt-3" style="border-radius: 50%;  width: 11rem; height: 11rem; "
+                                            src="<%= url_for(a.image) %>">
+                                    </div>
+                                    <div class="card-body px-4 text-white py-3">
+                                        <p><%= a.date_of_birth %></p>
+                                        <h4><%= a.name %></h4>
+                                        <p><%= a.description %></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <% end %>
+                        </div>
+                      </div>
+                    </div>
+                </div>  
+        </section>

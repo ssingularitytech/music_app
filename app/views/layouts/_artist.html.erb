@@ -36,8 +36,8 @@
             <p class="card-text"><strong>Description:</strong> <%= a.description %></p>
              <!-- <%= button_to "Show", artist_path(a), method: :get, class: "btn btn-success btn-block" %> -->
             <div class="row d-flex">
-            <div class="col-md-6"><%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block" %></div>
-            <div class="col-md-6"><%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %></div>
+            <!-- <div class="col-md-6"><%= button_to "Edit", edit_artist_path(a), method: :get, class: "btn btn-primary btn-block" %></div> -->
+            <!-- <div class="col-md-6"><%= button_to "Delete", artist_path(a), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %></div> -->
             </div>
           </div>
           </div>
@@ -45,9 +45,9 @@
       </div>
     <% end %>
   </div>
-    <div class=" text-center">
+  <!-- <div class=" text-center">
     <%= button_to "Add New Artist", new_artist_path, method: :get ,class:"btn-warning border-0 rounded shadow p-3 m-3" %>
-  </div>
+  </div> -->
 </div>
 
 
